@@ -6,12 +6,12 @@
 # Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
 # a) Добавьте игру против бота
 # b) Подумайте как наделить бота ""интеллектом""
-
+import random
 from random import randint
 
 igrok1 = input("Игрок № 1, представтесь: ")
-igrok2 = input("Игрок № 2, представтесь: ")
-konfety = int(input("количество конфет на столе: "))
+igrok2 = input("Игрок № 2, представтесь: ") # igrok2 = "РОБОКОП" (для игры с ботом)
+konfety = int(input("количество конфет на столе: ")) # konfety = int(random.randint(100, 200)) (для игры с ботом)
 
 marker = randint(0,2) 
 if marker:
@@ -40,7 +40,7 @@ while konfety > 28:
         marker = False
         step(igrok1, k, count1, konfety)
     else:
-        k = input_konfety(igrok2)
+        k = input_konfety(igrok2) # k = random.randint(1, 28) для игры с ботом
         count2 += k
         konfety -= k
         marker = True
