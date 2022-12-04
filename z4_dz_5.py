@@ -17,5 +17,3 @@ def coding(string):
                 cout = 1
     print(cout, string[i])
 coding(string)
-
-
